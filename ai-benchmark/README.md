@@ -30,6 +30,7 @@ Each benchmark should take approximately 20 minutes to complete.
 
 ```
 $ git clone repository 
+$ git pull
 $ cd path/to/ARDC-ML/ai-benchmark
 ```
 
