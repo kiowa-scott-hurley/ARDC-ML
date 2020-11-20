@@ -1,0 +1,32 @@
+####################################### NOTES ############################################33
+
+The P4 GPUs are used for desktops, so in order to benchmark them you should use the desktop and benchmark interactively instead of using an sbatch script.
+
+Open a desktop (Strudel) and run these commands there.
+
+# navigate to the directory with your benchmarking information
+$ cd path/to/ARDC-ML/ai-benchmark
+
+# module load CUDA and CUDNN
+$ module load cuda/10.1
+$ module load cudnn/7.6.5-cuda10.1
+
+# activate your virtual environment
+$ source benchmark_venv/bin/activate
+
+# install TensorFlow and ai-benchmark
+$ pip install tensorflow-gpu
+$ pip install ai-benchmark
+
+# make folder to store results
+$ mkdir -p p4_benchmark_results
+
+#run the benchmarks
+$ python benchmark.py &> p4_benchmark_results/p4_benchmark_1.txt
+$ python benchmark.py &> p4_benchmark_results/p4_benchmark_2.txt
+$ python benchmark.py &> p4_benchmark_results/p4_benchmark_3.txt
+$ python benchmark.py &> p4_benchmark_results/p4_benchmark_4.txt
+$ python benchmark.py &> p4_benchmark_results/p4_benchmark_5.txt
+$ python benchmark.py &> p4_benchmark_results/p4_benchmark_6.txt
+$ python benchmark.py &> p4_benchmark_results/p4_benchmark_7.txt
+
