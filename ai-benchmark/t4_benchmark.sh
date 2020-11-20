@@ -1,12 +1,13 @@
 #!/bin/bash
-#SBATCH --job-name=k80benchmark
+#SBATCH --job-name=t4benchmark
 #SBATCH --array=1-7
 #SBATCH --mem=64G
 #SBATCH --gres=gpu:1
 #SBATCH --time=00:30:00
 #SBATCH --output=slurm%j.out
 #SBATCH --error=slurm%j.err
-#SBATCH --partition=m3c
+#SBATCH --reservation=AWX
+#SBATCH --partition=m3t
 
 ############################ EDIT YOUR FILE PATH HERE ###################################
 # go to benchmarking folder
@@ -24,8 +25,8 @@ pip install tensorflow-gpu
 pip install ai-benchmark
 
 # make folder to store results
-mkdir -p k80_benchmark_results
+mkdir -p t4_benchmark_results
 
-# run the benchmark seven times and save the outputs
 echo "now processing task id:: " ${SLURM_ARRAY_TASK_ID}
-python benchmark.py &> k80_benchmark_results/k80_benchmark_${SLURM_ARRAY_TASK_ID}.txt
+python benchmark.py &> t4_benchmark_results/t4_benchmark_${SLURM_ARRAY_TASK_ID}.txt
+
