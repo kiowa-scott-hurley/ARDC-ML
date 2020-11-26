@@ -13,4 +13,6 @@ python Intro_to_CNNs.py
 
 Edit the job monitoring script per the instructions on the other page to reflect this, or to reflect the method you would usually use to run a Python script. 
 
-Included in this repo is an example filtered log file `` from monitoring this job so you can see how it looks in the Jupyter notebook. 
+Included in this repo is an example filtered log file `nvidia-filtered.log` from monitoring this job so you can see how it looks in the Jupyter notebook. 
+
+You'll still need to edit the notebook filepath to this logfile, and update where the plots are saved.
