@@ -35,7 +35,9 @@ LOGDATE=`date +%s`
 # Set up your environment here
 # ###############################################################
 
-# module load software and do other setup here
+cd path/to/job-monitoring/CNN_example
+source path/to/conda/bin/activate
+conda activate CNN
 
 # ################################################################
 
@@ -45,7 +47,7 @@ env > environment-$LOGDATE.log
 # Insert the command you want to monitor here, and add an “&” to the end of it
 # ###############################################################
 
-# Command to monitor &
+python path/to/job-monitoring/CNN_example/Intro_to_CNNs.py
 
 # ###############################################################
 
