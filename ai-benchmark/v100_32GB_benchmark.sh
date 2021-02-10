@@ -4,7 +4,7 @@
 #SBATCH --mem=64G
 #SBATCH --gres=gpu:V100:1
 #SBATCH --time=00:30:00
-#SBATCH --output=slurm%j.out
+#SBATCH --output=./v100_32GB_benchmark_results/slurm%j.out
 #SBATCH --error=slurm%j.err
 #SBATCH --partition=m3g
 #SBATCH --constraint="V100-32G"
@@ -14,8 +14,8 @@
 # cd path/to/ARDC-ML/ai-benchmark
 
 # module load CUDA and CUDNN
-module load cuda/10.1
-module load cudnn/7.6.5-cuda10.1
+module load cuda/11.0 
+module load cudnn/8.0.5-cuda11
 
 # activate your virtual environment
 source benchmark_venv/bin/activate
