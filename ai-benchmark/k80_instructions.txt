@@ -1,0 +1,27 @@
+####################################### NOTES ############################################
+
+The K80 GPUs are used exclusively for desktops, so in order to benchmark them you should use the desktop with a K80 GPU and benchmark interactively$
+Open a desktop (Strudel) and run these commands there.
+
+# navigate to the directory with your benchmarking information
+$ cd path/to/ARDC-ML/ai-benchmark
+
+# module load CUDA and CUDNN
+$ module load cuda/11.0
+$ module load cudnn/8.0.5-cuda11
+
+# activate your virtual environment
+$ source benchmark_venv/bin/activate
+
+# install TensorFlow and ai-benchmark
+$ pip install tensorflow-gpu
+$ pip install ai-benchmark
+
+#run the benchmarks
+$ python benchmark.py &> k80_benchmark_results/k80_benchmark_1.txt
+$ python benchmark.py &> k80_benchmark_results/k80_benchmark_2.txt
+$ python benchmark.py &> k80_benchmark_results/k80_benchmark_3.txt
+$ python benchmark.py &> k80_benchmark_results/k80_benchmark_4.txt
+$ python benchmark.py &> k80_benchmark_results/k80_benchmark_5.txt
+$ python benchmark.py &> k80_benchmark_results/k80_benchmark_6.txt
+$ python benchmark.py &> k80_benchmark_results/k80_benchmark_7.txt

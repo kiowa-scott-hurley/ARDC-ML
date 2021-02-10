@@ -1,6 +1,6 @@
-####################################### NOTES ############################################33
+####################################### NOTES ###########################################
 
-The P4 GPUs are used for desktops, so in order to benchmark them you should use the desktop and benchmark interactively instead of using an sbatch script.
+The P4 GPUs are used for desktops, so in order to benchmark them you should use the desktop with a P4 GPU and benchmark interactively instead of using an sbatch script.
 
 Open a desktop (Strudel) and run these commands there.
 
@@ -17,9 +17,6 @@ $ source benchmark_venv/bin/activate
 # install TensorFlow and ai-benchmark
 $ pip install tensorflow-gpu
 $ pip install ai-benchmark
-
-# make folder to store results
-$ mkdir -p p4_benchmark_results
 
 #run the benchmarks
 $ python benchmark.py &> p4_benchmark_results/p4_benchmark_1.txt
