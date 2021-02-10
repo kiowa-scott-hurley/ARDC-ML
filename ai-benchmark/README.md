@@ -37,7 +37,7 @@ $ cd path/to/ARDC-ML/ai-benchmark
 2. Set up a Python virtual environment so you will be able to install ai-benchmark
 
 ```
-$ /usr/local/python/3.7.4-static/bin/python3 -m venv benchmark_venv
+$ /usr/local/python/3.8.7-static/bin/python3 -m venv
 ```
 
 3. Edit the relevant GPU file with your preferred text editor and ensure the path is set to your benchmark directory. The section to edit is clearly marked in the files. For example:
