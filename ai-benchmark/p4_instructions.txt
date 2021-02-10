@@ -1,4 +1,4 @@
-####################################### NOTES ############################################33
+####################################### NOTES ###########################################
 
 The P4 GPUs are used for desktops, so in order to benchmark them you should use the desktop with a P4 GPU and benchmark interactively instead of using an sbatch script.
 
