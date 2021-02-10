@@ -4,7 +4,7 @@
 #SBATCH --mem=64G
 #SBATCH --gres=gpu:V100:1
 #SBATCH --time=00:30:00
-#SBATCH --output=slurm%j.out
+#SBATCH --output=./v100_32GB_benchmark_results/slurm%j.out
 #SBATCH --error=slurm%j.err
 #SBATCH --partition=m3g
 #SBATCH --constraint="V100-32G"

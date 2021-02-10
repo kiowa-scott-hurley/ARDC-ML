@@ -4,7 +4,7 @@
 #SBATCH --mem=64G
 #SBATCH --gres=gpu:1
 #SBATCH --time=00:30:00
-#SBATCH --output=slurm%j.out
+#SBATCH --output=./t4_benchmark_results/slurm%j.out
 #SBATCH --error=slurm%j.err
 #SBATCH --reservation=AWX
 #SBATCH --partition=m3t
