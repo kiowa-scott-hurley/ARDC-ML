@@ -5,7 +5,6 @@ This folder contains the scripts used to run ai-benchmark across our GPUs, inclu
 - Tesla V100-PCIE-16GB
 - Tesla V100-PCIE-32GB
 - Tesla P100-PCIE-16GB
-- Tesla T4
 - Tesla K80
 - Tesla P4
 
@@ -20,7 +19,7 @@ You can compare these results to the ai-benchmark ranking here: http://ai-benchm
 
 Each script provided here runs the benchmark 7 times per GPU so any variance can be observed. These scripts are written as [batch jobs](https://docs.massive.org.au/M3/slurm/simple-batch-jobs.html#running-simple-batch-jobs) that once submitted, will be queued and execute when there are sufficient resources available.
 
-The only exception to this are the P4 GPUs, which are used for desktops. The best way to benchmark these is interactively through the [CvL desktop](https://www.cvl.org.au/cvl-desktop/getting-started-with-the-cvl). There is an instruction file on how to run these benchmarks too, called ```p4_instructions.txt```
+The P4 and K80 GPUs differ, as they are used exclusively for desktops. The best way to benchmark these is interactively through the [CvL desktop](https://www.cvl.org.au/cvl-desktop/getting-started-with-the-cvl). There is an instruction file on how to run these benchmarks too, called ```p4_instructions.txt``` and ```k80_instructions.txt```.
 
 Each benchmark should take approximately 20 minutes to complete.
 
