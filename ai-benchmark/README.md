@@ -5,7 +5,6 @@ This folder contains the scripts used to run ai-benchmark across our GPUs, inclu
 - Tesla V100-PCIE-16GB
 - Tesla V100-PCIE-32GB
 - Tesla P100-PCIE-16GB
-- Tesla T4
 - Tesla K80
 - Tesla P4
 
