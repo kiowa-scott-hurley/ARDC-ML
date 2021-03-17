@@ -58,6 +58,8 @@ export DATE=$LOGDATE; cat nividia-$DATE.log | grep -v 'gpu\|Idx' > nvidia-$DATE-
 ```
 This creates a file called nvidia-$DATE-filtered.log which you will use in the Jupyter notebook.
 
+Note; if you're monitoring an sbatch job, follow the instructions as listed, and then run ./job_monitoring_template.bash within your sbatch job submission script.
+
 ## Step Three: Visualising results in the Jupyter Notebook
 
 Once you open `gpu-usage.ipynb`, there are a few things you will need to edit before running the cells.
