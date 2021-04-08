@@ -5,6 +5,8 @@ This folder includes templates required to monitor a Python job on MASSIVE, and 
 
 It is important to note the job monitoring template provided here is set up specifically for Python jobs - if you require assisstance editing it to be appropriate for other jobs please email us at help@massive.org.au.
 
+[Step 3: Visualising Results](https://github.com/kiowa-scott-hurley/ARDC-ML/tree/kiowa-scott-hurley-patch-1/job-monitoring#user-content-visualising-results)
+
 ## Instructions to monitor your own job
 Having visibility over how your job runs can help you understand if your job is spending a lot of energy moving files around, or if it’s using the GPUs to their fullest capacity. This job monitoring script will allow you to gather metrics about your job, and then examine the outputs in a Jupyter notebook. 
 
