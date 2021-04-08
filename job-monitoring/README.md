@@ -1,11 +1,11 @@
 # Job Monitoring on M3.
 Note: This documentation is under active development, meaning that it can change over time as we refine it. Please email help@massive.org.au if you require assistance, or have suggestions to improve this documentation.
 
+[jump](#step-three-visualising-results-in-the-jupyter-notebook)
+
 This folder includes templates required to monitor a Python job on MASSIVE, and a Jupyter notebook to analyse the outputs. 
 
 It is important to note the job monitoring template provided here is set up specifically for Python jobs - if you require assisstance editing it to be appropriate for other jobs please email us at help@massive.org.au.
-
-[Step 3: Visualising Results](https://github.com/kiowa-scott-hurley/ARDC-ML/tree/kiowa-scott-hurley-patch-1/job-monitoring#user-content-visualising-results)
 
 ## Instructions to monitor your own job
 Having visibility over how your job runs can help you understand if your job is spending a lot of energy moving files around, or if it’s using the GPUs to their fullest capacity. This job monitoring script will allow you to gather metrics about your job, and then examine the outputs in a Jupyter notebook. 
@@ -62,7 +62,7 @@ This creates a file called nvidia-$DATE-filtered.log which you will use in the J
 
 Note; if you're monitoring an sbatch job, follow the instructions as listed, and then run ./job_monitoring_template.bash within your sbatch job submission script.
 
-<h2 id="visualising-results">Step Three: Visualising results in the Jupyter Notebook</h3>
+## Step Three: Visualising results in the Jupyter Notebook
 
 Once you open `gpu-usage.ipynb`, there are a few things you will need to edit before running the cells.
 
