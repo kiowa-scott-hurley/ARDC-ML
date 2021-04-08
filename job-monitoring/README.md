@@ -60,7 +60,7 @@ This creates a file called nvidia-$DATE-filtered.log which you will use in the J
 
 Note; if you're monitoring an sbatch job, follow the instructions as listed, and then run ./job_monitoring_template.bash within your sbatch job submission script.
 
-## Step Three: Visualising results in the Jupyter Notebook
+<h2 id="visualising-results">Step Three: Visualising results in the Jupyter Notebook</h3>
 
 Once you open `gpu-usage.ipynb`, there are a few things you will need to edit before running the cells.
 
