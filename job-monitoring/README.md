@@ -47,9 +47,9 @@ python your/python/job &
 
 Once you have made these edits, save the job monitoring file. 
 
-### Step Two: Running the job monitoring script, and filtering the output
+### Step Two: Running the job monitoring script, and filtering the output (smux or desktop)
 
-Once you have your job monitoring script, you'll want to run it.
+Once you have your edited job monitoring script, you'll want to run it.
 ```
 ./job_monitoring_template.bash
 ```
@@ -62,9 +62,33 @@ export DATE=$LOGDATE; cat nividia-$DATE.log | grep -v 'gpu\|Idx' > nvidia-$DATE-
 ```
 This creates a file called nvidia-$DATE-filtered.log which you will use in the Jupyter notebook.
 
-Note; if you're monitoring an sbatch job, follow the instructions as listed, and then run ./job_monitoring_template.bash within your sbatch job submission script.
+### Step Two: Running the job monitoring script, and filtering the output (sbatch)
+
+Once you have edited your job monitoring script, you'll want to run it in an sbatch script. For example;
+```
+#!/bin/bash
+#SBATCH --job-name=MyJob
+#SBATCH --account=ab12
+#SBATCH --time=01:00:00
+#SBATCH --ntasks=1
+#SBATCH --mem-per-cpu=4096
+#SBATCH --gres=gpu:V100:1
+#SBATCH --partition=m3g
+
+./job_monitoring_template.bash
+```
+Once this has ran you will have a file called `nvidia-$LOGDATE.log`.
+
+In order to make this logfile readable to pandas in the Jupyter notebook, you'll need to filter the data with the following command:
+
+```
+export DATE=$LOGDATE; cat nividia-$DATE.log | grep -v 'gpu\|Idx' > nvidia-$DATE-filtered.log
+```
+You could add this command to your sbatch job submission script. This creates a file called nvidia-$DATE-filtered.log which you will use in the Jupyter notebook to visualise your resource utilisation. 
 
 ### Step Three: Visualising results in the Jupyter Notebook
+
+We have provided a Jupyter notebook called `gpu-usage.ipynb`. You can open this in the [Strudel desktop](https://docs.massive.org.au/M3/connecting/connecting-via-strudel.html?highlight=desktop) using the terminal and the browser, or with [Strudel2 Beta's JupyterLab](https://docs.massive.org.au/M3/connecting/strudel2/connecting-to-jupyter-lab.html?highlight=jupyterlab) feature. 
 
 Once you open `gpu-usage.ipynb`, there are a few things you will need to edit before running the cells.
 
