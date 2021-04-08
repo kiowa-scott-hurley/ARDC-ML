@@ -60,7 +60,7 @@ In order to make this logfile readable to pandas in the Jupyter notebook, you'll
 ```
 export DATE=$LOGDATE; cat nividia-$DATE.log | grep -v 'gpu\|Idx' > nvidia-$DATE-filtered.log
 ```
-This creates a file called nvidia-$DATE-filtered.log which you will use in the Jupyter notebook.
+This creates a file called `nvidia-$DATE-filtered.log` which you will use in the Jupyter notebook.
 
 ### Step Two: Running the job monitoring script, and filtering the output (sbatch)
 
@@ -90,7 +90,7 @@ In order to make this logfile readable to pandas in the Jupyter notebook, you'll
 ```
 export DATE=$LOGDATE; cat nividia-$DATE.log | grep -v 'gpu\|Idx' > nvidia-$DATE-filtered.log
 ```
-You could add this command to your sbatch job submission script. This creates a file called nvidia-$DATE-filtered.log which you will use in the Jupyter notebook to visualise your resource utilisation. 
+You could add this command to your sbatch job submission script. This creates a file called `nvidia-$DATE-filtered.log` which you will use in the Jupyter notebook to visualise your resource utilisation. 
 
 ### Step Three: Visualising results in the Jupyter Notebook
 
