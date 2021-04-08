@@ -3,6 +3,8 @@ Note: This documentation is under active development, meaning that it can change
 
 This folder includes templates required to monitor a Python job on MASSIVE, and a Jupyter notebook to analyse the outputs. 
 
+We have included an example with concrete steps in CNN_example/README.md which we recommend you try first.
+
 It is important to note the job monitoring template provided here is set up specifically for Python jobs - if you require assisstance editing it to be appropriate for other jobs please email us at help@massive.org.au.
 
 ## Instructions to monitor your own job
@@ -14,7 +16,9 @@ There are three steps to this process.
 2. Running the job monitoring file, and filtering the output.
 3. Editing the Jupyter notebook to visualise the results. 
 
-## Step One: Monitoring the Job
+These instructions differ slightly depending on if you're running an interactive job using smux or the CvL desktop, or if you're submitting a job to the queue using sbatch. 
+
+### Step One: Monitoring the Job
 In order to monitor your job, you'll need to make two edits to `job_monitoring_template.bash` using your favourite text editor. 
 
 The first section to edit is where you are setting up the environment to run your job. For example, this might include performing module loads, or activating virtual environments. Anything that needs to happen before your job runs should be put here.
@@ -43,7 +47,7 @@ python your/python/job &
 
 Once you have made these edits, save the job monitoring file. 
 
-## Step Two: Running the job monitoring script, and filtering the output
+### Step Two: Running the job monitoring script, and filtering the output
 
 Once you have your job monitoring script, you'll want to run it.
 ```
@@ -60,7 +64,7 @@ This creates a file called nvidia-$DATE-filtered.log which you will use in the J
 
 Note; if you're monitoring an sbatch job, follow the instructions as listed, and then run ./job_monitoring_template.bash within your sbatch job submission script.
 
-## Step Three: Visualising results in the Jupyter Notebook
+### Step Three: Visualising results in the Jupyter Notebook
 
 Once you open `gpu-usage.ipynb`, there are a few things you will need to edit before running the cells.
 
