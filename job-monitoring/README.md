@@ -49,7 +49,7 @@ Once you have made these edits, save the job monitoring file.
 
 ### Step Two: Running the job monitoring script, and filtering the output (smux or desktop)
 
-Once you have your edited job monitoring script, you'll want to run it.
+If you're using an interactive smux session or desktop session, then once you have your edited job monitoring script, you'll want to run it.
 ```
 ./job_monitoring_template.bash
 ```
@@ -64,7 +64,7 @@ This creates a file called nvidia-$DATE-filtered.log which you will use in the J
 
 ### Step Two: Running the job monitoring script, and filtering the output (sbatch)
 
-Once you have edited your job monitoring script, you'll want to run it in an sbatch script. For example;
+If you're submitting your job with sbatch, then once you have edited your job monitoring script, you'll want to add it to an sbatch script. For example;
 ```
 #!/bin/bash
 #SBATCH --job-name=MyJob
@@ -75,7 +75,13 @@ Once you have edited your job monitoring script, you'll want to run it in an sba
 #SBATCH --gres=gpu:V100:1
 #SBATCH --partition=m3g
 
+# monitored-python-job.sh
+
 ./job_monitoring_template.bash
+```
+Then you will want to run your job.
+```
+sbatch monitored-python-job.sh
 ```
 Once this has ran you will have a file called `nvidia-$LOGDATE.log`.
 
