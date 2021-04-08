@@ -16,7 +16,7 @@ There are three steps to this process.
 2. Running the job monitoring file, and filtering the output.
 3. Editing the Jupyter notebook to visualise the results. 
 
-These instructions differ slightly depending on if you're running an interactive job using smux or the CvL desktop, or if you're submitting a job to the queue using sbatch. 
+These instructions differ slightly depending on if you're running an interactive job using [smux](https://docs.massive.org.au/M3/slurm/interactive-jobs.html?highlight=smux) or the [CvL desktop](https://docs.massive.org.au/M3/connecting/connecting-via-strudel.html?highlight=desktop), or if you're submitting a job to the queue using [sbatch](https://docs.massive.org.au/M3/slurm/simple-batch-jobs.html). 
 
 ### Step One: Monitoring the Job
 In order to monitor your job, you'll need to make two edits to `job_monitoring_template.bash` using your favourite text editor. 
