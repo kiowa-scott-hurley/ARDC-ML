@@ -54,7 +54,7 @@ It will output a logfile called `nvidia-$LOGDATE.log`.
 In order to make this logfile readable to pandas in the Jupyter notebook, you'll need to filter the data with the following command:
 
 ```
-export DATE=$LOGDATE; cat nividia-$DATE.log | grep -v 'gpu\|Idx' > nvidia-$DATE-filtered.log
+export DATE=$LOGDATE; cat nvidia-$DATE.log | grep -v 'gpu\|Idx' > nvidia-$DATE-filtered.log
 ```
 This creates a file called nvidia-$DATE-filtered.log which you will use in the Jupyter notebook.
 
