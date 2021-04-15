@@ -5,6 +5,8 @@ This folder includes templates required to monitor a Python job on MASSIVE, and 
 
 It is important to note the job monitoring template provided here is set up specifically for Python jobs - if you require assisstance editing it to be appropriate for other jobs please email us at help@massive.org.au.
 
+This also assumes you are using a desktop or smux session while monitoring.
+
 ## Instructions to monitor your own job
 Having visibility over how your job runs can help you understand if your job is spending a lot of energy moving files around, or if it’s using the GPUs to their fullest capacity. This job monitoring script will allow you to gather metrics about your job, and then examine the outputs in a Jupyter notebook. 
 
@@ -57,8 +59,6 @@ In order to make this logfile readable to pandas in the Jupyter notebook, you'll
 export DATE=$LOGDATE; cat nvidia-$DATE.log | grep -v 'gpu\|Idx' > nvidia-$DATE-filtered.log
 ```
 This creates a file called nvidia-$DATE-filtered.log which you will use in the Jupyter notebook.
-
-Note; if you're monitoring an sbatch job, follow the instructions as listed, and then run ./job_monitoring_template.bash within your sbatch job submission script.
 
 ## Step Three: Visualising results in the Jupyter Notebook
 
