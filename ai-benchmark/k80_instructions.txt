@@ -13,10 +13,6 @@ $ module load cudnn/8.0.5-cuda11
 # activate your virtual environment
 $ source benchmark_venv/bin/activate
 
-# install TensorFlow and ai-benchmark
-$ pip install tensorflow-gpu
-$ pip install ai-benchmark
-
 #run the benchmarks
 $ python benchmark.py &> k80_benchmark_results/k80_benchmark_1.txt
 $ python benchmark.py &> k80_benchmark_results/k80_benchmark_2.txt
