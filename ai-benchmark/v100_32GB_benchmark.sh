@@ -20,10 +20,6 @@ module load cudnn/8.0.5-cuda11
 # activate your virtual environment
 source benchmark_venv/bin/activate
 
-# install TensorFlow and ai-benchmark
-pip install tensorflow-gpu
-pip install ai-benchmark
-
 # make folder to store results
 mkdir -p v100_32GB_benchmark_results
 
