@@ -39,7 +39,15 @@ $ cd path/to/ARDC-ML/ai-benchmark
 $ /usr/local/python/3.8.7-static/bin/python3 -m venv benchmark_venv
 ```
 
-3. Edit the relevant GPU file with your preferred text editor and ensure the path is set to your benchmark directory. The section to edit is clearly marked in the files. For example:
+3. Activate your virtual environment and install Tensorflow and ai-benchmark
+
+```
+$ source benchmark_venv/bin/activate
+$ pip install tensorflow-gpu
+$ pip install ai-benchmark
+```
+
+4. Edit the relevant GPU file with your preferred text editor and ensure the path is set to your benchmark directory. The section to edit is clearly marked in the files. For example:
 
 ```nano gpu_benchmark.sh```
 
@@ -49,7 +57,7 @@ $ /usr/local/python/3.8.7-static/bin/python3 -m venv benchmark_venv
 # cd path/to/ARDC-ML/ai-benchmark
 ```
 
-4. Submit the benchmark using sbatch
+5. Submit the benchmark using sbatch
 
 ```
 sbatch gpu_benchmark.sh
