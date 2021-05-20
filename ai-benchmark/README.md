@@ -8,7 +8,7 @@ This folder contains the scripts used to run ai-benchmark across our GPUs, inclu
 - Tesla K80
 - Tesla P4
 
-ai-benchmark is an open source Python library which evaluates hardware across a range of AI activities, and provides a score for each individual activity, as well as a final;
+ai-benchmark is an open source Python library which evaluates hardware across a range of AI activities, providing a score for each individual activity, as well as a final;
 - Device Inference Score;
 - Device Training Score, and;
 - Device AI score.
